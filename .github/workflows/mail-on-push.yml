@@ -13,7 +13,7 @@ with:
 
 subject: something
   body: nothing
-  to: what?
+  to: daniel.dogadajev@gmail.com
   from: github
 
 on: [push]
