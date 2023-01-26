@@ -12,8 +12,8 @@ with:
   password: ${{secrets.MAIL_PASSWORD}}
 
 subject: something
-  body: nothing
-  to: daniel.dogadajev@gmail.com
-  from: github
+body: "nothing"
+to: daniel.dogadajev@gmail.com
+from: github actions
 
 on: [push]
