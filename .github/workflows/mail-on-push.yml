@@ -1,3 +1,5 @@
+on: [push]
+
 jobs: 
   mail_on_push:
     runs_on: ubuntu-latest
@@ -15,5 +17,3 @@ subject: something
 body: "nothing"
 to: daniel.dogadajev@gmail.com
 from: github actions
-
-on: [push]
