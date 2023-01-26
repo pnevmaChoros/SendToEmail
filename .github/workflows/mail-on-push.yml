@@ -1,7 +1,7 @@
 name: learn-github-actions
 on: push
 jobs: 
-  build:
+  mail_on_push:
     runs-on: ubuntu-latest
     steps:
       - name: Send mail
@@ -13,5 +13,5 @@ jobs:
           password: ${{secrets.MAIL_PASSWORD}}
           subject: Github Actions job result
           to: daniel.dogadajev@gmail.com
-          from: ppp
+          from: Github actions
           body: lol
