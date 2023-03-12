@@ -12,11 +12,12 @@ jobs:
       - name: Send mail
         uses: dawidd6/action-send-mail@v3
         with:
-          server_address: smtp.mail.mail
+          server_address: smtp.gmail.com
           server_port: 465
           username: ${{ secrets.GMAIL_USERNAME }}
           password: ${{ secrets.GMAIL_PASSWORD }}
           from: Github
+          secure: true
           to: ${{ secrets.GMAIL_USERNAME }}
           subject: Send email
           body: If you see this message then it just works!
