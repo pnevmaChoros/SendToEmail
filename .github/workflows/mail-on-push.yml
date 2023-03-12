@@ -11,5 +11,5 @@ jobs:
       -uses: actions/checkout@v2
 
       -name: Hellow World
-        run: echo Hello, world!
+        run: echo "Hello, world!"
 
