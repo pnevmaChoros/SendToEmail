@@ -1,17 +1,15 @@
-name: learn-github-actions
-on: push
+name: Send-Email-When-Push
+
+on: 
+  push:
+    branches: main
+
 jobs: 
-  mail_on_push:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Send mail
-        uses: dawidd6/action-send-mail@v3
-        with:
-          server_address: smtp.gmail.com
-          server_port: 465
-          username: ${{secrets.MAIL_USERNAME}}
-          password: ${{secrets.MAIL_PASSWORD}}
-          subject: Github Actions job result
-          to: daniel.dogadajev@gmail.com
-          from: Github actions
-          body: lol
+      -uses: actions/checkout@v2
+
+      -name: Hellow World
+        run: echo Hello, world!
+
