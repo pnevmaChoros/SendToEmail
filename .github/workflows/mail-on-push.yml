@@ -1,13 +1,24 @@
-on: 
+name: Send mail
+
+on:
   push:
-    branches: main
+    branches:
+      - 'main'
 
 jobs: 
-  build:
+  mail-on-push:
     runs-on: ubuntu-latest
     steps:
-      -uses: actions/checkout@v2
+      - name: Send mail
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.mail.mail
+          server_port: 465
+          username: ${{ secrets.GMAIL_USERNAME }}
+          password: ${{ secrets.GMAIL_PASSWORD }}
+          from: Github
+          to: ${{ secrets.GMAIL_USERNAME }}
+          subject: Send email
+          body: If you see this message then it just works!
 
-      -name: Hellow World
-      -run: echo "Hello, world!"
 
