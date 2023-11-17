@@ -1,2 +1,2 @@
 # SendToEmail
-Testing email sending through github
+Testing email sending throu github
